@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <title>AngualarJS - Directives pt1</title>
+    <style >
+      .circular{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body ng-controller="AppCtrl">
+    <ul ng-cloak>
+      <li ng-repeat="repo in repos">
+        <div class="circular" back-img="{{repo.owner.avatar_url}}"></div>
+        <h1>{{repo.name}}</h1>
+      </li>
+    </ul>
+  </body>
+</html>

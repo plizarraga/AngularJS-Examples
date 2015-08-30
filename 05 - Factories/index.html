@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="ToDoList">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="angular-local-storage.min.js"></script>
+    <script src="controller.js" charset="utf-8"></script>
+    <title>AngualarJS - Factories</title>
+  </head>
+  <body ng-controller="ToDoController">
+    <ul>
+      <li ng-repeat="todo in todos">
+        {{todo.descripcion}} -
+        {{todo.fecha | date: "short"}} -
+        <a href="#" ng-click="removeToDo(todo)" style="color:red;">Eliminar</a>
+      </li>
+    </ul>
+    <form ng-submit="addToDo()">
+      <input type="text" ng-model="newToDo.descripcion" placeholder="Descripcion">
+      <input type="date" ng-model="newToDo.fecha" placeholder="Fecha">
+      <input type="submit" value="Crear ToDo" />
+    </form>
+    <button type="button" ng-click="clearAll()">Limpiar lista</button>
+  </body>
+</html>
