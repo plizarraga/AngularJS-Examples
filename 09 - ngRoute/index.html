@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="app.js"></script>
+    <script src="directives.js"></script>
+    <script src="controllers.js"></script>
+    <title>AngualarJS - Directives pt2</title>
+    <style >
+      .circular{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      .no-list li{
+        list-style-type: none;
+      }
+      body{
+        text-align: center;
+        background-color: #eee;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-view>
+
+    </div>
+  </body>
+</html>
